@@ -1,11 +1,11 @@
 import { defineConfig } from '@apps-in-toss/web-framework/config';
 
 export default defineConfig({
-  appName: 'hi5games-cat-tripletilematch', // 개발자 콘솔에 / 앱 정보 / 앱 ID 와 일치.
+  appName: 'sticky-ageofsolitaire', // 개발자 콘솔에 / 앱 정보 / 앱 ID 와 일치.
   brand: {
-    displayName: '트리플 타일 매치 : 고양이의 보은', // 화면에 노출될 앱의 한글 이름으로 바꿔주세요.
+    displayName: '에이지 오브 솔리테어', // 화면에 노출될 앱의 한글 이름으로 바꿔주세요.
     primaryColor: '#3182F6', // 화면에 노출될 앱의 기본 색상으로 바꿔주세요.
-    icon: "https://static.toss.im/appsintoss/2281/803e01f5-fd6f-47a6-8e0e-7f29a65af2c7.png", // 화면에 노출될 앱의 아이콘 이미지 주소로 바꿔주세요.
+    icon: "https://static.toss.im/appsintoss/9891/08db4ac3-4b0a-4582-9a8e-f715146aa929.png", // 화면에 노출될 앱의 아이콘 이미지 주소로 바꿔주세요.
     bridgeColorMode: 'inverted', // Basic, Inverted
   },
   web: {

@@ -7,11 +7,11 @@
     "dev": "granite dev",
     "build": "granite build",
     "preview": "vite preview",
-    "deploy": "ait deploy"
+    "deploy": "ait deploy",
+    "adb": "adb reverse tcp:8081 tcp:8081 && adb reverse tcp:5173 tcp:5173 && adb reverse --list"
   },
   "dependencies": {
     "@apps-in-toss/web-framework": "^1.2.0"
-
   },
   "devDependencies": {
     "@babel/core": "7.23.9",

@@ -15,20 +15,16 @@
   <meta name="x5-fullscreen" content="true"/>
   <meta name="360-fullscreen" content="true"/>
 
-  
-  <!-- 게임 빌드 css,js head위치에 있는 파일 카피해 온다. -->
-
-
 
   <!--  HI5SDK -->
   <link rel="stylesheet" type="text/css" href="./HI5SDK.css"/>
-  <script src="./HI5SDK.js" charset="utf-8"> </script>
+  <script src="./HI5SDK.js" charset="utf-8"></script>
+
+  <!-- Egret Loader -->
+  <script src="./scripts/egret-loader.js"></script>
 
 </head>
 <body>
-  <!-- 게임 빌드 index.html body 부분. -->
-
-
 <!-- Hi5Games start -->
 <div id="hi5intro" class="hi5-intro">
   <div class="hi5logo"></div>
@@ -53,23 +49,14 @@
 
 
 <script type="text/javascript">
-  // [필수] gameId
-  const gameId = "12MatchCat01";
-  // [필수] onload 에서 sdk 초기화 시작
-  // 초기화 끝나면 window.HI5CORE.onLoad를 호출한다.
-  window.onload = async() => {
-    const ret = await window.HI5TOSS.init(gameId);
-  }
-  // [필수]
-  window.HI5CORE.onLoad = () => {
-    // 
-    const retView = document.getElementById('retView');
-    if(retView){
-      retView.style.display = "none";
-    }
-    // 게임 빌드 index.html 게임 실행 관련 코드를 가져 와야 한다.
-
-  }
+  // Egret 게임 로더 초기화
+  EgretLoader.init('38AgeOfSolitaire')
+    .then(() => {
+      console.log('Egret game loaded successfully');
+    })
+    .catch((error) => {
+      console.error('Failed to load Egret game:', error);
+    });
 </script>
 
 
