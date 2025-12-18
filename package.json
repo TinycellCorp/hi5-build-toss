@@ -8,7 +8,8 @@
     "build": "granite build",
     "preview": "vite preview",
     "deploy": "ait deploy",
-    "adb": "adb reverse tcp:8081 tcp:8081 && adb reverse tcp:5173 tcp:5173 && adb reverse --list"
+    "adb": "adb reverse tcp:8081 tcp:8081 && adb reverse tcp:5173 tcp:5173 && adb reverse --list",
+    "import:egret": "node scripts/import-egret.js"
   },
   "dependencies": {
     "@apps-in-toss/web-framework": "^1.2.0"

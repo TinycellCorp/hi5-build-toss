@@ -1,61 +1,82 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <meta charset="utf-8">
 
   <title></title>
 
-  <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1, minimum-scale=1,maximum-scale=1"/>
+  <style>
+    html,
+    body {
+      -ms-touch-action: none;
+      padding: 0;
+      border: 0;
+      margin: 0;
+      height: 100%;
+    }
+  </style>
+
+  <meta name="viewport"
+    content="width=device-width,user-scalable=no,initial-scale=1, minimum-scale=1,maximum-scale=1" />
 
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="format-detection" content="telephone=no">
 
-  <meta name="full-screen" content="yes"/>
-  <meta name="x5-fullscreen" content="true"/>
-  <meta name="360-fullscreen" content="true"/>
+  <meta name="full-screen" content="yes" />
+  <meta name="x5-fullscreen" content="true" />
+  <meta name="360-fullscreen" content="true" />
 
 
   <!--  HI5SDK -->
-  <link rel="stylesheet" type="text/css" href="./HI5SDK.css"/>
+  <link rel="stylesheet" type="text/css" href="./HI5SDK.css" />
   <script src="./HI5SDK.js" charset="utf-8"></script>
 
   <!-- Egret Loader -->
-  <script src="./scripts/egret-loader.js"></script>
+  <script src="./egret-loader.js"></script>
 
 </head>
+
 <body>
-<!-- Hi5Games start -->
-<div id="hi5intro" class="hi5-intro">
-  <div class="hi5logo"></div>
-  <div id="ageall" class="ageall"></div>
-  <div class="loader-box">
-    <div class="loader"></div>
-  </div>
-</div>
+  <!-- EgretPlayer start -->
+  <div style="margin: auto;width: 100%;height: 100%;" class="egret-player" data-entry-class="Main"
+    data-orientation="portrait" data-scale-mode="fixedNarrow" data-frame-rate="60" data-content-width="720"
+    data-content-height="1280" data-show-paint-rect="false" data-multi-fingered="2" data-show-fps="false"
+    data-show-log="false" data-show-fps-style="x:0,y:0,size:12,textColor:0xffffff,bgAlpha:0.9">
+    <!-- EgretPlayer end -->
 
-<div id="hi5alertbox" class="hi5alertbox">
-  <div class="hi5alertbox-msg">
-    <div id="hi5alertcontent"></div>
-    <div id="hi5alertboxbt" class="hi5alertbox-bt">닫기</div>  
-  </div>
-</div>
+    <!-- Hi5Games start -->
+    <div id="hi5intro" class="hi5-intro">
+      <div class="hi5logo"></div>
+      <div id="ageall" class="ageall"></div>
+      <div class="loader-box">
+        <div class="loader"></div>
+      </div>
+    </div>
 
-<!-- <textarea id="retView" style="width: 100%; height: 100vh; margin-top: 50px;  position: fixed; z-index: 999;">
+    <div id="hi5alertbox" class="hi5alertbox">
+      <div class="hi5alertbox-msg">
+        <div id="hi5alertcontent"></div>
+        <div id="hi5alertboxbt" class="hi5alertbox-bt">닫기</div>
+      </div>
+    </div>
+
+    <!-- <textarea id="retView" style="width: 100%; height: 100vh; margin-top: 50px;  position: fixed; z-index: 999;">
 </textarea> -->
-<!-- Hi5Games end -->
+    <!-- Hi5Games end -->
 
 </body>
 
 
 <script type="text/javascript">
   // Egret 게임 로더 초기화
-  EgretLoader.init('38AgeOfSolitaire')
+  EgretLoader.init('46SolitaireCookingTower')
     .then(() => {
       console.log('Egret game loaded successfully');
     })
     .catch((error) => {
-      console.error('Failed to load Egret game:', error);
+      alert(`Failed to load Egret game: ${JSON.stringify(error)}`);
     });
 </script>
 

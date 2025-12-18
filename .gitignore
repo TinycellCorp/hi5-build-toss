@@ -25,3 +25,5 @@ node_modules
 
 public/
 !public/HI5SDK.{css,js}
+dist/
+*.ait
