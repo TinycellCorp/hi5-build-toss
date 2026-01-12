@@ -1,15 +1,23 @@
+/* Do not edit - hi5-config */
+const hi5AppName = "sticky-ageofsolitaire";
+const hi5DisplayName = "에이지 오브 솔리테어";
+const hi5PrimaryColor = "#3182F6";
+const hi5IconUrl = "https://static.toss.im/appsintoss/9891/08db4ac3-4b0a-4582-9a8e-f715146aa929.png";
+const hi5BridgeColorMode = "inverted";
+/* End hi5-config */
+
 import { defineConfig } from '@apps-in-toss/web-framework/config';
 
 export default defineConfig({
-  appName: 'sticky-ageofsolitaire', // 개발자 콘솔에 / 앱 정보 / 앱 ID 와 일치.
+  appName: hi5AppName,
   brand: {
-    displayName: '에이지 오브 솔리테어', // 화면에 노출될 앱의 한글 이름으로 바꿔주세요.
-    primaryColor: '#3182F6', // 화면에 노출될 앱의 기본 색상으로 바꿔주세요.
-    icon: "https://static.toss.im/appsintoss/9891/08db4ac3-4b0a-4582-9a8e-f715146aa929.png", // 화면에 노출될 앱의 아이콘 이미지 주소로 바꿔주세요.
-    bridgeColorMode: 'inverted', // Basic, Inverted
+    displayName: hi5DisplayName,
+    primaryColor: hi5PrimaryColor,
+    icon: hi5IconUrl,
+    bridgeColorMode: hi5BridgeColorMode,
   },
   web: {
-    host: 'localhost', // 로컬에서 샌드박스 앱을 연결해 테스트 하려면 설정 해야 한당.
+    host: 'localhost',
     port: 5173,
     commands: {
       dev: 'vite --host',
