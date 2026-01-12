@@ -4,7 +4,7 @@
  * Egret 프로젝트를 빌드하고 Hi5 플랫폼용으로 배포하는 스크립트
  *
  * 사용법:
- *   npm run import:egret -- --project ../egret --output ./public
+ *   npm run import:egret -- --project ../egret_aos --output ./public
  */
 
 const { execSync } = require('child_process');
@@ -16,7 +16,7 @@ const path = require('path');
  */
 function parseArgs(args) {
     const result = {
-        project: '../egret',
+        project: null,  // 기본값 제거 (필수 입력)
         output: './public'
     };
 
@@ -38,6 +38,13 @@ function parseArgs(args) {
  */
 function main() {
     const args = parseArgs(process.argv.slice(2));
+
+    // project 필수 체크
+    if (!args.project) {
+        console.error('Error: --project option is required');
+        console.error('Usage: npm run import:egret -- --project ../egret_aos');
+        process.exit(1);
+    }
 
     // 스크립트 디렉토리 기준으로 경로 계산
     const scriptDir = __dirname;

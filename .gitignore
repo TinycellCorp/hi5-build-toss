@@ -27,3 +27,6 @@ public/
 !public/HI5SDK.{css,js}
 dist/
 *.ait
+
+*.local.json
+tmp*
