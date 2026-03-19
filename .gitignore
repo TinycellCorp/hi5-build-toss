@@ -22,3 +22,12 @@ node_modules
 *.sw?
 
 .granite
+.hi5sdk-backup
+
+dist/
+cocos-metadata.json
+*.ait
+
+public/*
+!public/HI5SDK.css
+!public/HI5SDK.js

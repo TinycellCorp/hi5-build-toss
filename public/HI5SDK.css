@@ -89,6 +89,7 @@
 }
 .hi5alertbox-msg{
     width: calc(80% - 80px);  padding: 40px; padding-bottom: 20px; background-color: #FFF; color: #000;  border-radius: 30px; 
+    text-align: center;
 }
 .hi5alertbox-bt{
     margin-top: 20px;

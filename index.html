@@ -1,76 +1,64 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <meta charset="utf-8">
 
   <title></title>
 
-  <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1, minimum-scale=1,maximum-scale=1"/>
+  <meta name="viewport"
+    content="width=device-width,user-scalable=no,initial-scale=1, minimum-scale=1,maximum-scale=1" />
 
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="format-detection" content="telephone=no">
 
-  <meta name="full-screen" content="yes"/>
-  <meta name="x5-fullscreen" content="true"/>
-  <meta name="360-fullscreen" content="true"/>
+  <meta name="full-screen" content="yes" />
+  <meta name="x5-fullscreen" content="true" />
+  <meta name="360-fullscreen" content="true" />
 
-  
+
   <!-- 게임 빌드 css,js head위치에 있는 파일 카피해 온다. -->
 
 
 
   <!--  HI5SDK -->
-  <link rel="stylesheet" type="text/css" href="./HI5SDK.css"/>
+  <link rel="stylesheet" type="text/css" href="./HI5SDK.css" />
   <script src="./HI5SDK.js" charset="utf-8"> </script>
 
+  <script src="./cocos-loader.js" charset="utf-8"> </script>
+
 </head>
+
 <body>
   <!-- 게임 빌드 index.html body 부분. -->
 
 
-<!-- Hi5Games start -->
-<div id="hi5intro" class="hi5-intro">
-  <div class="hi5logo"></div>
-  <div id="ageall" class="ageall"></div>
-  <div class="loader-box">
-    <div class="loader"></div>
+  <!-- Hi5Games start -->
+  <div id="hi5intro" class="hi5-intro">
+    <div class="hi5logo"></div>
+    <div id="ageall" class="ageall"></div>
+    <div class="loader-box">
+      <div class="loader"></div>
+    </div>
   </div>
-</div>
 
-<div id="hi5alertbox" class="hi5alertbox">
-  <div class="hi5alertbox-msg">
-    <div id="hi5alertcontent"></div>
-    <div id="hi5alertboxbt" class="hi5alertbox-bt">닫기</div>  
+  <div id="hi5alertbox" class="hi5alertbox">
+    <div class="hi5alertbox-msg">
+      <div id="hi5alertcontent"></div>
+      <div id="hi5alertboxbt" class="hi5alertbox-bt">닫기</div>
+    </div>
   </div>
-</div>
 
-<!-- <textarea id="retView" style="width: 100%; height: 100vh; margin-top: 50px;  position: fixed; z-index: 999;">
+  <!-- <textarea id="retView" style="width: 100%; height: 100vh; margin-top: 50px;  position: fixed; z-index: 999;">
 </textarea> -->
-<!-- Hi5Games end -->
-
+  <!-- Hi5Games end -->
 </body>
 
-
-<script type="text/javascript">
-  // [필수] gameId
-  const gameId = "12MatchCat01";
-  // [필수] onload 에서 sdk 초기화 시작
-  // 초기화 끝나면 window.HI5CORE.onLoad를 호출한다.
-  window.onload = async() => {
-    const ret = await window.HI5TOSS.init(gameId);
-  }
-  // [필수]
-  window.HI5CORE.onLoad = () => {
-    // 
-    const retView = document.getElementById('retView');
-    if(retView){
-      retView.style.display = "none";
-    }
-    // 게임 빌드 index.html 게임 실행 관련 코드를 가져 와야 한다.
-
-  }
+<script>
+  console.log(`userAgent: ${navigator.userAgent}`);
+  const isToss = /AppsInToss|TossApp/i.test(navigator.userAgent);
+  console.log(`isToss: ${isToss}`);
 </script>
-
 
 </html>
